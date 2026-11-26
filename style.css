@@ -431,28 +431,11 @@ kbd {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-size: 1.2rem;
+  display: inline-block;
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.025em;
   flex-shrink: 0;
-}
-
-.brand-mark {
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
-  color: #ffffff;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px -3px rgba(59, 130, 246, 0.5);
 }
 
 .brand-dot {
