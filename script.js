@@ -375,28 +375,28 @@ document.addEventListener('DOMContentLoaded', () => {
     'cert-9': {
       type: 'certificate',
       badge: 'Sertifikasi Resmi',
-      subBadge: 'Solo Learn • 2026',
-      title: 'Introduce To Python',
+      subBadge: 'Sololearn • November 2026',
+      title: 'Introduction to Python',
       img: 'assets/certificates/cert-9.png',
-      certId: '07Z6QR412ZQR',
+      certId: 'CC-RQLCTKWP',
       verifyUrl: 'https://www.sololearn.com/certificates/CC-RQLCTKWP',
       info: [
-        { label: 'Penerbit Sertifikat', value: 'SoloLearn' },
-        { label: 'Tahun Kelulusan', value: '2026' },
+        { label: 'Penerbit Sertifikat', value: 'Sololearn' },
+        { label: 'Tanggal Terbit', value: '08 November 2026' },
         { label: 'ID Kredensial', value: 'CC-RQLCTKWP', isCopyable: true }
       ],
-      description: 'Sertifikasi kompetensi pemrograman Python dari SoloLearn yang dirancang untuk membangun fondasi penulisan kode berstandar industri. Meliputi sintaksis dasar Python, tipe data terstruktur, alur kendali logika program, pembuatan fungsi modular, hingga pengelolaan berkas dan penanganan eksepsi.',
+      description: 'Sertifikasi penyelesaian kursus Introduction to Python dari Sololearn yang memvalidasi pemahaman teoretis dan praktis dasar pemrograman Python. Materi mencakup konsep dasar dan operasi aritmetika, pengelolaan string dan variabel, input pengguna, alur kontrol (percabangan dan perulangan), manipulasi list, serta pembuatan fungsi yang terstruktur.',
       highlightsTitle: 'Kompetensi & Materi Yang Dikuasai',
       highlights: [
-        'Penguasaan sintaksis inti Python: tipe data primitif, list, tuple, set, dan dictionary',
-        'Penerapan struktur kontrol alur logika: percabangan IF-ELIF-ELSE dan perulangan FOR/WHILE',
-        'Modularitas fungsi, passing arguments, scope variabel, dan Clean Code',
-        'Penanganan error secara aman dengan mekanisme try-except blocks'
+        'Konsep dasar Python: penulisan output, operasi matematika sederhana, komentar, dan dasar debugging',
+        'Pengelolaan string, variabel, tipe data dasar (integer, float, boolean), konversi tipe, dan input pengguna',
+        'Struktur logika dan alur kontrol program menggunakan operator boolean, percabangan if-elif-else, serta perulangan while dan for',
+        'Penyimpanan dan manipulasi koleksi data menggunakan list, indexing, slicing, serta pembuatan fungsi modular dengan def dan return'
       ],
-      tags: ['Python', 'Programming Logic', 'Data Structure'],
+      tags: ['Python', 'Control Flow', 'Lists', 'Functions', 'Sololearn'],
       links: [
         {
-          label: 'Verifikasi Sertifikat Resmi (SoloLearn) ↗',
+          label: 'Verifikasi Sertifikat Resmi (Sololearn) ↗',
           url: 'https://www.sololearn.com/certificates/CC-RQLCTKWP',
           isPrimary: true
         },
