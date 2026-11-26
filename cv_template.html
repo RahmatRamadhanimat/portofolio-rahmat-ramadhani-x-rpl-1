@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Rahmat Ramadhani | Software Engineering Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #f1f5f9;
+      --bg-sheet: #ffffff;
+      --bg-chip: #f8fafc;
+      --text-main: #0f172a;
+      --text-sec: #475569;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --font-main: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    [data-theme="dark"] {
+      --bg-page: #07090f;
+      --bg-sheet: #0e121c;
+      --bg-chip: #141927;
+      --text-main: #f8fafc;
+      --text-sec: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-main);
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.55;
+      padding: 1.5rem 1rem 3rem;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .toolbar {
+      max-width: 900px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .toolbar-group { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; }
+    .tool-btn {
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 0.55rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg-sheet);
+      color: var(--text-main);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: 0.2s ease;
+    }
+    .tool-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .tool-btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    .tool-btn-primary:hover { filter: brightness(1.08); color: #ffffff; }
+
+    .cv-sheet {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg-sheet);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 45px -20px rgba(15, 23, 42, 0.18);
+    }
+
+    .cv-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding-bottom: 1.65rem;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 1.75rem;
+    }
+    .cv-identity { flex: 1; }
+    .cv-name {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.25rem;
+    }
+    .cv-role {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .cv-contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 1.15rem;
+      font-size: 0.84rem;
+      color: var(--text-sec);
+    }
+    .cv-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .cv-section { margin-bottom: 1.65rem; }
+    .cv-section:last-child { margin-bottom: 0; }
+    .cv-sec-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.9rem;
+    }
+    .cv-summary {
+      font-size: 0.93rem;
+      color: var(--text-sec);
+      line-height: 1.65;
+    }
+
+    .cv-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .cv-sub-block h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .cv-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .cv-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+      font-size: 0.88rem;
+      color: var(--text-sec);
+    }
+    .cv-list li {
+      padding-left: 1rem;
+      position: relative;
+    }
+    .cv-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .chip {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.24rem 0.65rem;
+      border-radius: 7px;
+      background: var(--bg-chip);
+      border: 1px solid var(--border);
+      color: var(--text-sec);
+    }
+
+    .cert-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    .cert-table th,
+    .cert-table td {
+      text-align: left;
+      padding: 0.55rem 0.65rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .cert-table th {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .cert-code {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.14rem 0.45rem;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 700px) {
+      .cv-sheet { padding: 1.5rem; }
+      .cv-header { flex-direction: column-reverse; align-items: flex-start; }
+      .cv-two-col { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: #ffffff !important; color: #0f172a !important; padding: 0; }
+      .toolbar { display: none !important; }
+      .cv-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100%;
+        background: #ffffff !important;
+      }
+      a { color: #0f172a !important; text-decoration: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div class="toolbar-group">
+      <a href="index.html" class="tool-btn">← Kembali ke Portofolio</a>
+    </div>
+    <div class="toolbar-group">
+      <button type="button" id="cv-theme-btn" class="tool-btn">Ganti Tema</button>
+      <a href="assets/CV_Rahmat_Ramadhani.pdf" download="CV_Rahmat_Ramadhani.pdf" class="tool-btn">Unduh PDF Resmi</a>
+      <button type="button" id="cv-print-btn" class="tool-btn tool-btn-primary">Cetak / Simpan PDF</button>
+    </div>
+  </div>
+
+  <main class="cv-sheet">
+    <header class="cv-header">
+      <div class="cv-identity">
+        <h1 class="cv-name">Rahmat Ramadhani</h1>
+        <p class="cv-role">Software Engineering Student — SMK Krian 1 Sidoarjo (RPL)</p>
+        <div class="cv-contact-list">
+          <span>Sidoarjo, Jawa Timur, Indonesia</span>
+          <span><a href="mailto:ramadhanirahmat47@gmail.com">ramadhanirahmat47@gmail.com</a></span>
+          <span><a href="https://github.com/ramadhanirahmat47-rgb" target="_blank" rel="noopener noreferrer">github.com/ramadhanirahmat47-rgb</a></span>
+          <span><a href="https://linkedin.com/in/rahmat-ramadhani01" target="_blank" rel="noopener noreferrer">linkedin.com/in/rahmat-ramadhani01</a></span>
+        </div>
+      </div>
+      <img src="assets/profile.jpg" alt="Foto Profil Rahmat Ramadhani" class="cv-photo">
+    </header>
+
+    <section class="cv-section">
+      <h2 class="cv-sec-title">Ringkasan Profil</h2>
+      <p class="cv-summary">
+        Siswa jurusan Rekayasa Perangkat Lunak (RPL) di SMK Krian 1 Sidoarjo dengan minat kuat pada pengembangan web modern,
+        perancangan UI/UX, Artificial Intelligence (AI), serta Internet of Things (IoT). Terbiasa membangun proyek terstruktur,
+        mulai dari prototipe Figma hingga implementasi model Computer Vision berbasis browser dengan TensorFlow.js.
+      </p>
+    </section>
+
+    <div class="cv-two-col cv-section">
+      <div>
+        <h2 class="cv-sec-title">Pendidikan &amp; Prestasi</h2>
+        <div class="cv-sub-block">
+          <h4>SMK Krian 1 Sidoarjo</h4>
+          <p class="cv-meta">Rekayasa Perangkat Lunak (RPL) • 2026 — Sekarang</p>
+          <ul class="cv-list">
+            <li>Juara 1 Kompetisi Antar Kelas Web Design (2026)</li>
+            <li>Mata pelajaran inti: Pemrograman Terstruktur, PBO, PPLG, TJK, KKD, dan Informatika</li>
+            <li>Aktif di Ekstrakurikuler AI Study Club &amp; Skarisa Robotic</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2 class="cv-sec-title">Keahlian Teknis</h2>
+        <div class="cv-sub-block">
+          <div class="chips" style="margin-bottom: 0.65rem;">
+            <span class="chip">Python (Menengah)</span>
+            <span class="chip">VS Code &amp; DevTools (Menengah)</span>
+            <span class="chip">Figma UI Prototyping (Menengah)</span>
+            <span class="chip">HTML (Dasar)</span>
+            <span class="chip">Java OOP (Dasar)</span>
+            <span class="chip">Git &amp; GitHub (Dasar)</span>
+            <span class="chip">CSS (Pemula)</span>
+            <span class="chip">JavaScript (Pemula)</span>
+            <span class="chip">C++ (Pemula)</span>
+            <span class="chip">Responsive UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="cv-section">
+      <h2 class="cv-sec-title">Proyek Pilihan</h2>
+      <ul class="cv-list">
+        <li><strong>AI Ekspresi Wajah (Vercel):</strong> Deteksi ekspresi wajah real-time (senang, sedih, netral) di browser dengan Teachable Machine &amp; TensorFlow.js (<a href="https://ai-ekspresi.vercel.app/" target="_blank" rel="noopener noreferrer">ai-ekspresi.vercel.app</a>).</li>
+        <li><strong>AI Model Rock Paper Scissors:</strong> Game Batu Gunting Kertas berbasis Computer Vision real-time di browser dengan TensorFlow.js &amp; Teachable Machine.</li>
+        <li><strong>Mobile App Design (Figma):</strong> Prototipe aplikasi mobile interaktif berbasis User-Centered Design karya Lomba Web Design 17 Agustus.</li>
+        <li><strong>Skarisa Robotic (IoT):</strong> Pemrograman mikrokontroler Arduino &amp; ESP32, pembacaan sensor, serta komunikasi nirkabel IoT.</li>
+        <li><strong>AI Study Club (Python):</strong> Dokumentasi notebook Python untuk pengolahan data dan pengenalan Machine Learning.</li>
+        <li><strong>Blogger TJK &amp; Proyek Ketahanan Pangan PPLG:</strong> Blog edukatif Teknik Jaringan Komputer serta proyek budidaya Kangkung &amp; 10 jenis TOGA.</li>
+      </ul>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-sec-title">Sertifikasi Resmi</h2>
+      <table class="cert-table">
+        <thead>
+          <tr>
+            <th>Sertifikat</th>
+            <th>Penerbit</th>
+            <th>Tanggal / Tahun</th>
+            <th>ID Kredensial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.sololearn.com/certificates/CC-7IATYSQ3" target="_blank" rel="noopener noreferrer">Introduction to HTML</a></td>
+            <td>Sololearn</td>
+            <td>26 November 2026</td>
+            <td><span class="cert-code">CC-7IATYSQ3</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.sololearn.com/certificates/CC-RQLCTKWP" target="_blank" rel="noopener noreferrer">Introduction to Python</a></td>
+            <td>Sololearn</td>
+            <td>08 November 2026</td>
+            <td><span class="cert-code">CC-RQLCTKWP</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.dicoding.com/certificates/NVP7WY21RZR0" target="_blank" rel="noopener noreferrer">Belajar Dasar AI</a></td>
+            <td>Dicoding Academy</td>
+            <td>2026</td>
+            <td><span class="cert-code">NVP7WY21RZR0</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.dicoding.com/certificates/07Z6QR412ZQR" target="_blank" rel="noopener noreferrer">Memulai Pemrograman Dengan Python</a></td>
+            <td>Dicoding Academy</td>
+            <td>2026</td>
+            <td><span class="cert-code">07Z6QR412ZQR</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.dicoding.com/certificates/ERZR79RWMZYV" target="_blank" rel="noopener noreferrer">Introduction To Financial Literacy</a></td>
+            <td>DBS Foundation × Dicoding</td>
+            <td>2026</td>
+            <td><span class="cert-code">ERZR79RWMZYV</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.dicoding.com/certificates/JLX1KL1KJP72" target="_blank" rel="noopener noreferrer">Belajar Strategi Pengembangan Diri</a></td>
+            <td>Dicoding Academy</td>
+            <td>2026</td>
+            <td><span class="cert-code">JLX1KL1KJP72</span></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.dicoding.com/certificates/KEXLM1KEYZG2" target="_blank" rel="noopener noreferrer">Spec-Driven Development dengan Kiro</a></td>
+            <td>Dicoding Academy</td>
+            <td>2026</td>
+            <td><span class="cert-code">KEXLM1KEYZG2</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('cv-print-btn')?.addEventListener('click', () => window.print());
+    document.getElementById('cv-theme-btn')?.addEventListener('click', () => {
+      const curr = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', curr);
+    });
+  </script>
+</body>
+</html>
