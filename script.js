@@ -407,6 +407,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
+    'cert-10': {
+      type: 'certificate',
+      badge: 'Sertifikasi Resmi',
+      subBadge: 'Sololearn • November 2026',
+      title: 'Introduction to HTML',
+      img: 'assets/certificates/cert-10.jpg',
+      certId: 'CC-7IATYSQ3',
+      verifyUrl: 'https://www.sololearn.com/certificates/CC-7IATYSQ3',
+      info: [
+        { label: 'Penerbit Sertifikat', value: 'Sololearn' },
+        { label: 'Tanggal Terbit', value: '26 November 2026' },
+        { label: 'ID Kredensial', value: 'CC-7IATYSQ3', isCopyable: true }
+      ],
+      description: 'Sertifikasi penyelesaian kursus Introduction to HTML dari Sololearn yang memvalidasi pemahaman teoretis dan praktis dasar pengembangan web menggunakan HTML. Materi mencakup struktur dasar dokumen HTML, pemformatan teks, penggunaan elemen dan atribut, penyisipan tautan dan gambar, pembuatan daftar dan tabel, hingga perancangan formulir dan elemen media.',
+      highlightsTitle: 'Kompetensi & Materi Yang Dikuasai',
+      highlights: [
+        'Struktur dasar dokumen HTML (&lt;html&gt;, &lt;head&gt;, &lt;title&gt;, &lt;body&gt;), heading, paragraf, dan pemformatan teks',
+        'Penggunaan elemen, atribut, hyperlink (&lt;a&gt;), serta penyisipan gambar (&lt;img&gt;) dan konten multimedia (&lt;audio&gt;, &lt;video&gt;)',
+        'Penyusunan daftar (&lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;) dan tabel data terstruktur (&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;)',
+        'Pembuatan formulir interaktif dengan &lt;form&gt;, &lt;label&gt;, berbagai tipe &lt;input&gt;, dan tombol submit'
+      ],
+      tags: ['HTML', 'Web Development', 'Forms & Tables', 'Semantic Markup', 'Sololearn'],
+      links: [
+        {
+          label: 'Verifikasi Sertifikat Resmi (Sololearn) ↗',
+          url: 'https://www.sololearn.com/certificates/CC-7IATYSQ3',
+          isPrimary: true
+        },
+        {
+          label: 'Lihat Gambar Sertifikat ↗',
+          url: 'assets/certificates/cert-10.jpg',
+          isPrimary: false
+        }
+      ]
+    },
     'cert-1': {
       type: 'certificate',
       badge: 'Sertifikasi Resmi',
